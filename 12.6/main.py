@@ -21,6 +21,9 @@ intent show_logistics {
         reply("正在为您查询订单 {{order_id}} 的物流信息...")
     ]
 }
+
+intent ask_complaint_type {
+    match: llm_intent: "start_complaint" 
 '''
 
 async def main():
