@@ -7,9 +7,7 @@ prompt: "请问您的订单号是？（6位）"
 [rule]
 scene: logistics
 status: ready_to_query
-actions:
-type: reply
-message: "正在查询 {{order/runtime}} 的物流信息..."
+reply: "正在查询 {{order_id}} 的物流信息..."
 
 [rule]
 scene: logistics
@@ -25,9 +23,7 @@ prompt: "请问投诉类型？（服务/商品/物流）"
 [rule]
 scene: complaint
 status: recorded
-actions:
-type: reply
-message: "已记录您的 {{complaint_type}} 投诉"
+reply: "已记录您的 {{complaint_type}} 投诉"
 
 [rule]
 scene: refund

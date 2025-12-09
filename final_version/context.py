@@ -6,13 +6,14 @@ class Context:
     def set(self, key, value):
         self.data[key] = value
 
+    def clear(self):
+        self.data.clear()  # 👈 添加这一行！
+
     def render(self, text):
         result = text
         for key, value in self.data.items():
-            # 支持 {{key}} 格式（如 {{order/runtime}}）
             placeholder1 = f"{{{{{key}}}}}"
             result = result.replace(placeholder1, str(value))
-            # 支持将 / 转为 _ 的别名（如 {{order_id}}）
             if '/' in key:
                 alias_key = key.replace('/', '_')
                 placeholder2 = f"{{{{{alias_key}}}}}"
