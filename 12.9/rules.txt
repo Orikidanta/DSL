@@ -1,0 +1,37 @@
+[rule]
+scene: logistics
+status: need_order_id
+ask: order_id
+prompt: "请问您的订单号是？"
+
+[rule]
+scene: logistics
+status: ready_to_query
+reply: "正在查询 {{order/runtime}} 的物流信息..."
+
+[rule]
+scene: complaint
+status: need_type
+ask: complaint_type
+prompt: "请问投诉类型？（服务/商品/物流）"
+
+[rule]
+scene: complaint
+status: recorded
+reply: "已记录您的 {{complaint_type}} 投诉"
+
+[rule]
+scene: refund
+status: need_reason
+ask: refund_reason
+prompt: "请说明退款原因"
+
+[rule]
+scene: refund
+status: processing
+reply: "正在处理您的退款申请..."
+
+[rule]
+scene: other
+status: unknown
+reply: "我不太确定您的需求，请说明是要查物流、投诉还是退款？"
