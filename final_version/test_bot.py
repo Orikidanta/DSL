@@ -1,4 +1,4 @@
-# test_e2e.py
+# test_bot.py
 import sys
 import os
 import time

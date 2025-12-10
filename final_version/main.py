@@ -9,6 +9,7 @@ EXIT_KEYWORDS = {'退出', '结束', '再见', 'bye', 'exit', 'quit'}
 
 # 初始化日志器
 logger = setup_logger()
+context = Context()
 
 def main_v2():
     with open('rules.txt', encoding='utf-8') as f:
